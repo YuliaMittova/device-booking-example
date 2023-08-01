@@ -1,6 +1,16 @@
+## How to start:
+1. Run Gradle tasks clean build
+2. Create an Application configuration in IntellijIdea with following details:
+
+   - JDK -> your current JDK
+   - -cp -> device-booking-service.main
+   - Main class -> com.devicebooking.example.ApplicationKt
+   - Environment variables(optional) -> APPLICATION_NAME=device-booking-service;LOGBACK_APPENDER=STDOUT 
+
 ## Fonoapi problem
 
 1. Currently, Fonoapi doesn't work, it's impossible to take a token.
+
    <img src="./documentation/fonoapi_screenshot.jpg" width="300" alt="Current Fonoapi state">
 
 - There is analogue of it: https://api.query.wurfl.io but it doesn't provide all needed information (no info about bands
