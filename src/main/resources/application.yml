@@ -1,0 +1,51 @@
+micronaut:
+  application:
+    name: device-booking-service
+  router:
+    static-resources:
+      swagger:
+        paths: classpath:META-INF/swagger
+        mapping: /swagger/**
+      swagger-ui:
+        paths: classpath:META-INF/swagger/views/swagger-ui
+        mapping: /**
+    versioning:
+      enabled: true
+      default-version: 1
+      header:
+        enabled: true
+        names:
+          - 'X-API-VERSION'
+          - 'Version'
+
+mongodb:
+  uri: ${MONGODB_URI:`mongodb://mongodb:mongodb@localhost:27017`}
+
+netty:
+  default:
+    allocator:
+      max-order: 3
+
+swagger-ui:
+  enabled: true
+
+jackson:
+  date-format: yyyy-MM-dd'T'HH:mm:ss.SSS'Z'
+  serialization:
+    writeDatesAsTimestamps: false
+  serialization-inclusion: non_null
+
+endpoints:
+  all:
+    path: management
+  loggers:
+    enabled: true
+    sensitive: false
+    write-sensitive: false
+  routes:
+    enabled: true
+    sensitive: false
+  health:
+    enabled: true
+    sensitive: false
+    details-visible: ANONYMOUS
