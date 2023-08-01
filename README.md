@@ -13,16 +13,16 @@
 
    <img src="./documentation/fonoapi_screenshot.jpg" width="300" alt="Current Fonoapi state">
 
-- There is analogue of it: https://api.query.wurfl.io but it doesn't provide all needed information (no info about bands
+2. There is analogue of it: https://api.query.wurfl.io but it doesn't provide all needed information (no info about bands
   etc.) (https://api.query.wurfl.io/v1/docs/#operation/find-devices-by-model-name)
 
 ![wurfl_screenshot.jpg](documentation/wurfl_screenshot.jpg)
 ![wurfl_available_info.jpg](documentation/wurfl_available_info.jpg)
 
-2. There was one another option: open databases, like https://dbpedia.org/page/Samsung_Galaxy_Fold:
+3. There was one another option: open databases, like https://dbpedia.org/page/Samsung_Galaxy_Fold:
    But we cannot use them because it doesn't provide the needed information: 2g bands + technology
 
-3. We can try to use another open database, like this one: https://github.com/OpenDDRdotORG/OpenDDR-Resources
+4. We can try to use another open database, like this one: https://github.com/OpenDDRdotORG/OpenDDR-Resources
    But unfortunately it doesn't suit our need because of the same reason:
 
 ```xml
@@ -51,10 +51,10 @@
 </device>
 ```
 
-4. We can try to get the information from the website: https://www.gsmarena.com/samsung_galaxy_s9-8966.php
+5. We can try to get the information from the website: https://www.gsmarena.com/samsung_galaxy_s9-8966.php
    This website has all needed data for us, but we need to grab it somehow.
    ![gsm_arena.jpg](documentation%2Fgsm_arena.jpg)
-5. We finally can ask ChatGPT to give us already parsed information in needed format. And call its API on crone from
+6. We finally can ask ChatGPT to give us already parsed information in needed format. And call its API on crone from
    time
    to time to update the existing data. It gave me data in the following format, but I think if I would create a better
    prompt it would work.
